@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephesan Enterprises Limited | Real Estate & Transport</title>
+    <style>
+        /* Modern Design Tokens & Earth Tone Variables */
+        :root {
+            --clay-charcoal: #1e2229;
+            --terracotta: #c36a4b;
+            --warm-beige: #f5f2eb;
+            --soft-white: #ffffff;
+            --muted-gray: #6b7280;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--warm-beige);
+            color: var(--clay-charcoal);
+            scroll-behavior: smooth;
+        }
+
+        /* 1. Unified Hero Banner (Home + Road + Truck Overlay) */
+        .hero {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--soft-white);
+            /* Fallback background color until you add your real photograph asset */
+            background-color: var(--clay-charcoal); 
+            background-image: url('assets/hero-unified-scene.jpg'); /* Your real asset path */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* The Soft Earth-Toned Filter Overlay for readability */
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(30, 34, 41, 0.85), rgba(195, 106, 75, 0.45));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin: 0 0 1rem 0;
+            letter-spacing: -0.5px;
+            font-weight: 800;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        /* 2. Corporate Story Section */
+        .story-section {
+            background-color: var(--soft-white);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .story-container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .story-container h2 {
+            font-size: 2rem;
+            color: var(--terracotta);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .story-container p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+        }
+
+        /* 3. Massive Quick-Action Buttons */
+        .action-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 3rem 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .massive-btn {
+            background-color: var(--clay-charcoal);
+            color: var(--soft-white);
+            border: 2px solid var(--clay-charcoal);
+            padding: 1.5rem 3rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .massive-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+
+        .massive-btn.properties {
+            background-color: var(--terracotta);
+            border-color: var(--terracotta);
+        }
+
+        /* 4. Portfolio Showcase Grids */
+        .showcase-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 5rem 1.5rem;
+        }
+
+        .section-heading {
+            font-size: 1.75rem;
+            border-left: 5px solid var(--terracotta);
+            padding-left: 15px;
+            margin: 4rem 0 2rem 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Top Hero Banner Element -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Stephesan Enterprises Limited</h1>
+            <p>Premium Real Estate Solutions & Dependable Commercial Transport Logistics</p>
+        </div>
+    </header>
+
+    <!-- 2. The Ten-Year Corporate Narrative Section -->
+    <section class="story-section">
+        <div class="story-container">
+            <h2>Our Foundation & Journey</h2>
+            <p>For over a decade, Stephesan Enterprises Limited has stood as a trusted cornerstone of development and commerce. We bridge two of the economy’s most vital pillars—Real Estate and Transport Logistics—with a singular commitment to excellence. In Real Estate, our reputation is anchored on uncompromising integrity, ensuring every land title is pristine, verified, and secure for your investment. Parallel to this, our Transport division drives industrial growth through unmatched efficiency in cargo delivery, utilizing a dependable fleet designed to keep your supply chain moving seamlessly. Ten years of dedicated service has taught us that infrastructure isn’t just about assets; it’s about delivering peace of mind, every single time.</p>
+        </div>
+    </section>
+
+    <!-- 3. Traffic-Directing Massive Action Buttons -->
+    <div class="action-container">
+        <a href="#real-estate-view" class="massive-btn properties">Explore Properties</a>
+        <a href="#transport-view" class="massive-btn">Book Transport Fleet</a>
+    </div>
+
+    <!-- 4. Dynamic Display Content Sections -->
+    <main class="showcase-container">
+        
+        <!-- Real Estate Display Node -->
+        <section id="real-estate-view">
+            <h2 class="section-heading">Featured Real Estate Portfolios</h2>
+            <div class="grid" id="real-estate-grid">
+                <!-- Multi-carousel property listings inject here via src/index.js -->
+            </div>
+        </section>
+
+        <!-- Fleet Transport Display Node -->
+        <section id="transport-view">
+            <h2 class="section-heading">Commercial Fleet & Logistics Operations</h2>
+            <div class="grid" id="transport-grid">
+                <!-- Logistics service options inject here via src/index.js -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Connects to your optimized compiled distribution asset -->
+    <script type="module" src="./dist/bundle.esm.js"></script>
+</body>
+</html>
